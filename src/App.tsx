@@ -1,28 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import ContentLogo from './assets/triple2x.png'
 import ContentAppStore from './assets/badge-apple4x.png'
 import ContentPlayStore from './assets/play-store2x.png'
-import { clear } from 'console'
+import Counter from './components/Counter'
 
 function App() {
-  const storeText1 = useRef<any>(null);
-  const [count1, setCount1] = useState<number>(0);
-  useEffect(() => {
-    console.log(count1);
-
-    if (count1 < 350) {
-      console.log('350');
-    } else {
-      console.log('350 else');
-
-      storeText1.current = null;
-      clearInterval(storeText1.current);
-      window.clearInterval(storeText1.current);
-    }
-  }, [count1])
-  
-
   return (
     <Section>
       <SectionLogoImg
@@ -32,19 +15,19 @@ function App() {
       <SectionColTitle>
         <SectionTitle>
           <b>
-            <span ref={storeText1}>{count1}</span>만 명
+            <Counter value={31}/>만 명
           </b>
           의 사용자
         </SectionTitle>
         <SectionTitle>
           <b>
-            <span ref={storeText1}>21</span>만 개
+            <Counter value={21}/>만 개
           </b>
           의 리뷰
         </SectionTitle>
         <SectionTitle>
           <b>
-            <span ref={storeText1}>650</span>만 개
+            <Counter value={650}/>만 개
           </b>
           의 저장
         </SectionTitle>
@@ -81,41 +64,41 @@ export default App
 const LogoImageFade = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-    transform: none;
+    transform: translateY(0px);
   }
 `;
 
 const SectionTextFade = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
   40% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
   100% {
     opactiy: 1;
-    transform: none;
+    transform: translateY(0px);
   }
 `;
 
 const SectionStoreFade = keyframes`
   0% {
     opacity: 0;
-    transform: none;
+    transform: translateY(10px);
   }
   45% {
     opacity: 0.2;
-    transform: translateY(-10px);
+    transform: translateY(10px);
   }
   100% {
     opactiy: 1;
-    transform: none;
+    transform: translateY(0px);
   }
 `;
 
@@ -133,11 +116,11 @@ const SectionLogoImg= styled.img`
   width: 400px;
   height: 338px;
   margin-top: 137px;
-  animation: ${LogoImageFade} 1.5s ease-in-out;
+  animation: ${LogoImageFade} 700ms ease-in-out;
 `
 
 const SectionColTitle = styled.div`
-  animation: ${SectionTextFade} 1.5s ease-in-out;
+  animation: ${SectionTextFade} 800ms ease-in-out;
 `;
 const SectionTitle = styled.div`
   font-size: 36px;
@@ -153,7 +136,7 @@ const SectionImage = styled.div`
 const SectionRowImage = styled.div`
   display: flex;
   align-items: center;
-  animation: ${SectionStoreFade} 1.5s ease-in-out;
+  animation: ${SectionStoreFade} 900ms ease-in-out;
 `
 
 const StoreLogoImage = styled.img`

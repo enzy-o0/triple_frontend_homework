@@ -73,30 +73,22 @@ const LogoImageFade = keyframes`
 `;
 
 const SectionTextFade = keyframes`
-  0% {
+  from{
     opacity: 0;
     transform: translateY(10px);
   }
-  40% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
+  to {
     opactiy: 1;
     transform: translateY(0px);
   }
 `;
 
 const SectionStoreFade = keyframes`
-  0% {
+  from {
     opacity: 0;
     transform: translateY(10px);
   }
-  45% {
-    opacity: 0.2;
-    transform: translateY(10px);
-  }
-  100% {
+  to {
     opactiy: 1;
     transform: translateY(0px);
   }

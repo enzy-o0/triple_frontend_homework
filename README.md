@@ -1,14 +1,14 @@
 ## 트리플 과제 전형
 
 ### 프로젝트 실행 방법
-#### `npm start`
+npm start
 
 
 ### 사용한 기술과 선택한 이유
-#### `styled-component`
+**styled-component**
 keyframe을 사용한 fade in 애니메이션 구현과 컴포넌트 기반으로 css를 구현하기 위해 사용하였습니다.
 
-#### `typescript`
+**typescript**
 컴파일 단계에서 오류를 포착할 수 있기에 사용하였습니다.
 
 ### 느낀 점

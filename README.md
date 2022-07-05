@@ -3,9 +3,18 @@
 ### 프로젝트 실행 방법
 #### `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### 사용한 기술과 선택한 이유
 #### `styled-component`
-keyframe을 사용한 ease out 애니메이션 구현과 컴포넌트 형식의 css를 구현하기 위해 사용했습니다.
+keyframe을 사용한 fade in 애니메이션 구현과 컴포넌트 기반으로 css를 구현하기 위해 사용하였습니다.
+
+#### `typescript`
+컴파일 단계에서 오류를 포착할 수 있기에 사용하였습니다.
+
+### 느낀 점
+일부는 keyframe을 이용하였지만, 직접 애니메이션을 구현해보는 경험을 해서 뜻깊었습니다. 
+
+세밀한 구현을 위해 easeOutExpo 공식을 이용하여 증가 속도가 느려지는 효과를 구현했다는 점과, 애니메이션에 최적화된 requestAnimationFrame api를 알게되었던 점이 좋은 경험이었다고 생각했습니다.
+
+마지막 count가 버벅이는 점을 해결하지 못한 점은 아쉬웠습니다.
+좀 더 자연스러운 애니메이션 구현을 위해 좀 더 심도 있는 학습을 해야겠다고 다짐하였습니다. 좋은 기회를 주셔서 감사드립니다.

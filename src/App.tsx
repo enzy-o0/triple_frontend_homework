@@ -1,33 +1,31 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import ContentLogo from './assets/triple2x.png'
-import ContentAppStore from './assets/badge-apple4x.png'
-import ContentPlayStore from './assets/play-store2x.png'
+import styled from 'styled-components'
+import ContentLogo from './assets/images/triple2x.png'
+import ContentAppStore from './assets/images/badge-apple4x.png'
+import ContentPlayStore from './assets/images/play-store2x.png'
 import Counter from './components/Counter'
+import { FadeInKeyFrame } from './assets/keyframes'
 
-function App() {
+const App = () => {
   return (
     <Section>
-      <SectionLogoImg
-        src={ContentLogo}
-        alt="tripleContentLogo"
-      />
+      <SectionLogoImg src={ContentLogo} alt="tripleContentLogo" />
       <SectionColTitle>
         <SectionTitle>
           <b>
-            <Counter value={31}/>만 명
+            <Counter value={31} />만 명
           </b>
           의 사용자
         </SectionTitle>
         <SectionTitle>
           <b>
-            <Counter value={21}/>만 개
+            <Counter value={21} />만 개
           </b>
           의 리뷰
         </SectionTitle>
         <SectionTitle>
           <b>
-            <Counter value={650}/>만 개
+            <Counter value={650} />만 개
           </b>
           의 저장
         </SectionTitle>
@@ -44,10 +42,7 @@ function App() {
             </StoreText>
           </SectionImage>
           <SectionImage>
-            <StoreLogoImage
-              src={ContentAppStore}
-              alt="ContentAppStore"
-            />
+            <StoreLogoImage src={ContentAppStore} alt="ContentAppStore" />
             <StoreText>
               2018 애플 앱스토어 <br />
               오늘의 여행앱 선정
@@ -61,59 +56,26 @@ function App() {
 
 export default App
 
-const LogoImageFade = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-`;
-
-const SectionTextFade = keyframes`
-  from{
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opactiy: 1;
-    transform: translateY(0px);
-  }
-`;
-
-const SectionStoreFade = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opactiy: 1;
-    transform: translateY(0px);
-  }
-`;
-
 const Section = styled.div`
   min-width: 1200px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
-  color: #3A3A3A;
-  font-family: 'sans-serif';
+  color: #3a3a3a;
+  font-family: sans-serif;
 `
 
-const SectionLogoImg= styled.img`
+const SectionLogoImg = styled.img`
   width: 400px;
   height: 338px;
   margin-top: 137px;
-  animation: ${LogoImageFade} 700ms ease-in-out;
+  animation: ${FadeInKeyFrame} 700ms ease-in-out;
 `
 
 const SectionColTitle = styled.div`
-  animation: ${SectionTextFade} 800ms ease-in-out;
-`;
+  animation: ${FadeInKeyFrame} 800ms ease-in-out;
+`
 const SectionTitle = styled.div`
   font-size: 36px;
   margin-bottom: 20px;
@@ -128,7 +90,7 @@ const SectionImage = styled.div`
 const SectionRowImage = styled.div`
   display: flex;
   align-items: center;
-  animation: ${SectionStoreFade} 900ms ease-in-out;
+  animation: ${FadeInKeyFrame} 900ms ease-in-out;
 `
 
 const StoreLogoImage = styled.img`
@@ -138,6 +100,6 @@ const StoreLogoImage = styled.img`
 `
 const StoreText = styled.div`
   font-size: 14px;
-  color: #3A3A3ACC;
+  color: #3a3a3acc;
   font-weight: bold;
 `

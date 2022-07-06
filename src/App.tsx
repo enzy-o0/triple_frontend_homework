@@ -63,7 +63,7 @@ const Section = styled.div`
   height: 552px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 0 auto;
   color: #3a3a3a;
 `

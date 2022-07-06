@@ -5,28 +5,30 @@ import ContentAppStore from './assets/images/badge-apple4x.png'
 import ContentPlayStore from './assets/images/play-store2x.png'
 import Counter from './components/Counter'
 import { FadeInKeyFrame } from './assets/keyframes'
+import GlobalStyle from './assets/styles/GlobalStyle'
 
 const App = () => {
   return (
     <Section>
+      <GlobalStyle />
       <SectionLogoImg src={ContentLogo} alt="tripleContentLogo" />
       <SectionColTitle>
         <SectionTitle>
-          <b>
+          <SectionTitleBold>
             <Counter value={31} />만 명
-          </b>
+          </SectionTitleBold>
           의 사용자
         </SectionTitle>
         <SectionTitle>
-          <b>
+          <SectionTitleBold>
             <Counter value={21} />만 개
-          </b>
+          </SectionTitleBold>
           의 리뷰
         </SectionTitle>
         <SectionTitle>
-          <b>
+          <SectionTitleBold>
             <Counter value={650} />만 개
-          </b>
+          </SectionTitleBold>
           의 저장
         </SectionTitle>
         <SectionRowImage>
@@ -58,27 +60,35 @@ export default App
 
 const Section = styled.div`
   min-width: 1200px;
+  height: 552px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin: 0 auto;
   color: #3a3a3a;
-  font-family: sans-serif;
 `
 
 const SectionLogoImg = styled.img`
   width: 400px;
   height: 338px;
-  margin-top: 137px;
   animation: ${FadeInKeyFrame} 700ms ease-in-out;
 `
 
 const SectionColTitle = styled.div`
+  height: 338px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   animation: ${FadeInKeyFrame} 800ms ease-in-out;
 `
 const SectionTitle = styled.div`
   font-size: 36px;
   margin-bottom: 20px;
+  letter-spacing: -1px;
+`
+
+const SectionTitleBold = styled.strong`
+  font-weight: bold;
 `
 
 const SectionImage = styled.div`
@@ -91,6 +101,7 @@ const SectionRowImage = styled.div`
   display: flex;
   align-items: center;
   animation: ${FadeInKeyFrame} 900ms ease-in-out;
+  margin-top: 50px;
 `
 
 const StoreLogoImage = styled.img`
